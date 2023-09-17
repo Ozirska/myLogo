@@ -1,0 +1,35 @@
+@import "variables.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Allan&family=Barlow:wght@300;400;500;800&family=Inter:wght@400;700;800&family=Mulish:wght@400;600;700&family=Noto+Sans+Symbols:wght@300;600;700&family=Open+Sans:ital,wght@0,300;0,400;1,600&family=Raleway:wght@400;800&family=Roboto:wght@300;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(237deg, #2c2d65 0.35%, #201f22 100%);
+  overflow-x: hidden;
+  font-family: "barlow";
+  z-index: 1;
+}
+.backgraund_img {
+  background-image: url("https://s3-alpha-sig.figma.com/img/cc1b/e9a2/6b5285619ac1312604a5100963c18d50?Expires=1695600000&Signature=epx3iSRLq9DtV1PrNRxzlwWK2QQ5541Px2LhYfTWLa5H4g3nD5~go6eNVm2WaQiQ0YZCmRZyj9v2l4e2tXnGh3nAt5wwoEuc0bi3gxH2thoY~~RIhFgjqLfBkjUN90ScaQdNAisn-97M4O1olHpqQ6nuD3wryvVvi-ECDpBqDWr2DRHnOMV1rkbBiNUKK8cIAK62Ux14H9zobA2zeVq0hb3h~nmJyKe8SXH~u0l-~JsPSbt0XgYziQZ1u9XrJgXv5Ycr2bVptkLuT49Hh~x1GUEJZO~9eQulOSlfqq2S4e1eMAFSU1OA7ptDrFCvBf0uKMB89frwvwhTfm0lHms6NA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+  background-size: 730px 747px;
+
+  background-position: calc(100% - -200px) -100px;
+  background-repeat: no-repeat;
+
+  @include for-large-down {
+    background: linear-gradient(237deg, #2c2d65 0.35%, #201f22 100%);
+  }
+}
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+  height: 100%;
+}

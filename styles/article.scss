@@ -1,0 +1,89 @@
+@import "variables.scss";
+
+.article_text::before {
+  content: "";
+  background-image: url("https://s3-alpha-sig.figma.com/img/5e62/9250/ae47f7c8069b4507928c9be64373f068?Expires=1695600000&Signature=Ju3YGJZij1lBYZKI8hyIb8UdRElTdqKdMKXvo2jpWhtLLEt-xYh4Q~Ki3gMCS-pmOzbcwRn0kjuXY-sEq~bMVSAyu2mRx2Eqn3w4M7CLhvjf7vdwMKaXtkJ42nNUbhfSdqxSrWGYinS~YZmG2wlUcmpqUywUIuXJOaiPeLy5l3Ao744EzR5kn8jvv~za-vMZZSN94mGRA0LSV7d3pJW9e3ZRPoAvfRZnkqPQ6Ngp6fttKoR9ELByS30S5cIarZ-dIM8AKo88nzOwpPJyY9yyyBA4MsbU-tXbdY7-dIx0fOi9VLYRcPmlAqyS9Q~wBytPsNtG5boVb5Xxy2g3cI4liA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+  width: 142px;
+  height: 153px;
+  position: absolute;
+  top: -5px;
+  left: -30px;
+}
+
+.article {
+  margin-top: 73px;
+
+  h4 {
+    color: $paragraph-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  h1 {
+    margin: 16px 0 30px 0;
+    color: $title-color;
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 64px;
+  }
+  p {
+    max-width: 570px;
+    margin: 0;
+    color: $paragraph-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  &_text {
+    position: relative;
+    margin: 0 auto;
+    max-width: 570px;
+    text-align: center;
+  }
+  &_block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 70px;
+
+    @include for-large-down {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    div {
+      display: grid;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(180deg, #4d4f95 0%, #2b2d66 100%);
+      box-shadow: 0px 24px 48px 0px rgba(0, 1, 44, 0.16);
+      img {
+        object-fit: cover;
+      }
+      div {
+        padding: 32px 38px;
+        text-align: left;
+
+        p {
+          color: $title-color;
+          font-size: 24px;
+          font-weight: 300;
+          line-height: 32px;
+          margin: 0;
+        }
+        span {
+          color: $paragraph-color;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 32px;
+          text-align: left;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

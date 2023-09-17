@@ -1,0 +1,17 @@
+$title-color: #fff;
+$paragraph-color: #ffffff80;
+$lite-paragraph-color: #efefef;
+$yelow-color: #e8ab36;
+$red-color: #e6606c;
+
+@mixin for-large-down {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin gap {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}

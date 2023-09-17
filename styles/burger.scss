@@ -1,0 +1,61 @@
+@import "variables.scss";
+
+#check-menu,
+.burger_menu,
+.close_menu {
+  display: none;
+}
+
+@include for-large-down {
+  #check-menu {
+    display: block;
+  }
+  .burger_menu {
+    display: block;
+  }
+
+  .nav {
+    z-index: 4;
+    list-style: none;
+    background-color: #746e8aec;
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  #check-menu:checked ~ .nav {
+    right: 0;
+  }
+
+  #check-menu:checked ~ label .burger_menu {
+    display: none;
+  }
+  #check-menu:checked ~ label .close_menu {
+    display: block;
+  }
+
+  #check-menu {
+    display: none;
+  }
+  label {
+    position: relative;
+    z-index: 9;
+  }
+
+  .nav a {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav a:hover {
+    color: rgb(206, 206, 206);
+  }
+}
